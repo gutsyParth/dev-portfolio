@@ -14,7 +14,7 @@ import {
   Mail,
   MapPin,
   Phone,
-} from "lucid-react";
+} from "lucide-react";
 
 import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
 
