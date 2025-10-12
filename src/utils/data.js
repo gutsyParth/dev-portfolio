@@ -280,8 +280,8 @@ export const SOCIAL_LINKS = [
     name: "Twitter",
     icon: FiTwitter,
     url: "https://twitter.com",
-    color: "hover:text-gray-400",
-    bgColor: "hover:bg-gray-800",
+    color: "hover:text-blue-600",
+    bgColor: "hover:bg-blue-100",
   },
   {
     name: "Email",
