@@ -286,7 +286,7 @@ export const SOCIAL_LINKS = [
   {
     name: "Email",
     icon: Mail,
-    url: "mailto:alex@example.com",
+    url: "parth.10june@gmail.com",
     color: "hover:text-green-400",
     bgColor: "hover:bg-green-500/10",
   },
@@ -301,7 +301,7 @@ export const CONTACT_INFO = [
   {
     icon: Mail,
     label: "Email",
-    value: "alex@timetoprogram.com",
+    value: "parth.10june@gmail.com",
   },
   {
     icon: Phone,
