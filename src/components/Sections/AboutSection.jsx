@@ -88,13 +88,13 @@ const AboutSection = () => {
                             <h3 className="text-2xl font-medium mb-6">My Mission</h3>
                             <p className={`text-lg leading-relaxed mb-6 ${isDarkMode ? "text-gray-300" : "text-gray-700"
                                 }`}>
-                                I believe technology should be a bridge that connects people and solves real-world problems. My mission is to create meaningful and impactful solutions that empower individuals and communities, leveraging innovation to make the world a better place.
+                                I believe in harnessing technology to solve real-world challenges and foster connections. My goal is to develop secure, scalable solutions that drive innovation in areas like AI and fintech, making a tangible difference for users and communities.
                             </p>
                             <p
                                 className={`text-lg leading-relaxed mb-6 ${isDarkMode ? "text-gray-400" : "text-gray-600"
                                     }`}
                             >
-                                When I'm not coding, you'll find me exploring new frameworks, contributing to open source, or mentoring aspiring developers. I love the constant evolution of web technologies and the endless possibilities they bring to create meaningful digital experiences.
+                                Outside of work, I dive into coding challenges (over 1000 solved on platforms like Codeforces, CodeChef, LeetCode, AtCoder etc), experiment with emerging tools, and contribute to open-source projects while mentoring newcomers in the dev community. The fast-paced world of software engineering keeps me inspired to push boundaries and create lasting impact.
                             </p>
                         </motion.div>
 

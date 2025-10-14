@@ -87,16 +87,17 @@ const HeroSection = () => {
                                 Full Stack Developer
                             </motion.div>
                             <motion.h1 variants={itemVariants} className="text-3xl md:text-5xl font-light mb-6 leading-tight">
-                                <span className={`${isDarkMode ? "text-white" : "text-gray-900"}`}>Building digital</span>
-                                <span className="text-blue-500 font-medium ml-2">experiences</span>
+                                <span className={`${isDarkMode ? "text-white" : "text-gray-900"}`}>Creating </span>
+                                <span className="text-blue-500 font-medium ml-2">Impactful & Innovative</span>
                                 <br />
-                                <span className={isDarkMode ? "text-white" : "text-gray-900"}>that matter</span>
+                                <span className={isDarkMode ? "text-white" : "text-gray-900"}>Tech Solutions</span>
+
                             </motion.h1>
                             <motion.p
                                 variants={itemVariants}
                                 className={`text-base md:text-lg ${isDarkMode ? "text-gray-400" : "text-gray-600"} mb-8 max-w-xl mx-auto font-light leading-relaxed`}
                             >
-                                I craft beautiful, functional web applications with modern technologies and thoughtful user experiences.
+                                I build robust, user-focused applications with a passion for solving complex problems.
                             </motion.p>
                             <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
                                 <motion.button
@@ -151,17 +152,18 @@ const HeroSection = () => {
                             </motion.div>
                             <motion.h1 variants={itemVariants} className="text-5xl xl:text-7xl font-light mb-8 leading-tight">
                                 <span className={`${isDarkMode ? "text-white" : "text-gray-900"}`}>
-                                    Building digital
+                                    Creating
                                 </span>
                                 <br />
-                                <span className="text-blue-500 font-medium">experiences</span>
+                                <span className="text-blue-500 font-medium">Impactful
+                                    & Innovative</span>
                                 <br />
                                 <span className={isDarkMode ? "text-white" : "text-gray-900"}>
-                                    that matter
+                                    Tech Solutions
                                 </span>
                             </motion.h1>
                             <motion.p variants={itemVariants} className={`text-xl ${isDarkMode ? "text-gray-400" : "text-gray-600"} mb-12 font-light leading-relaxed max-w-lg`}>
-                                I craft beautiful, functional web applications with modern technologies and thoughtful user experiences.
+                                I build robust, user-focused applications with a passion for solving complex problems
                             </motion.p>
                             <motion.div variants={itemVariants} className="flex gap-6 mb-8">
                                 <motion.button
@@ -183,15 +185,18 @@ const HeroSection = () => {
                             </motion.div>
                             <motion.div variants={itemVariants} className="flex space-x-6 mb-12">
                                 {[
-                                    { icon: FiGithub, href: "https://github.com/yourusername" },
-                                    { icon: FiLinkedin, href: "https://linkedin.com/in/yourusername" },
-                                    { icon: Mail, href: "mailto:your.email@example.com" },
+                                    { icon: FiGithub, href: "https://github.com/gutsyParth", target: "_blank", rel: "noopener noreferrer" },
+                                    { icon: FiLinkedin, href: "https://www.linkedin.com/in/parth-yadav-10june/", target: "_blank", rel: "noopener noreferrer" },
+                                    { icon: Mail, href: "mailto:parth.10june@gmail.com" },
                                 ].map((social, index) => (
                                     <motion.a
                                         key={index}
                                         href={social.href}
+                                        target={social.target || undefined}
+                                        rel={social.rel || undefined}
                                         whileHover={{ y: -3, scale: 1.1 }}
-                                        className={`p-3 rounded-full transition-colors ${isDarkMode ? "text-gray-400 hover:text-white hover:bg-gray-800" : "text-gray-500 hover:text-gray-900 hover:bg-gray-200"}`}
+                                        className={`p-3 rounded-full transition-colors ${isDarkMode ? "text-gray-400 hover:text-white hover:bg-gray-800" : "text-gray-500 hover:text-gray-900 hover:bg-gray-200"
+                                            }`}
                                         aria-label={`Visit my ${social.icon.name} profile`}
                                     >
                                         <social.icon size={20} />
