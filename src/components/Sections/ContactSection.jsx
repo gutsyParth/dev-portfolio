@@ -1,11 +1,69 @@
 import { useState, useRef } from "react";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
-import { Send } from "lucide-react";
+import { Send, Phone } from "lucide-react";
+import { FiGithub, FiLinkedin, FiMail, FiTwitter } from "react-icons/fi";
 import { useTheme } from "../../context/ThemeContext";
-import { CONTACT_INFO, SOCIAL_LINKS } from "../../utils/data";
-import { containerVariants, itemVariants } from "../../utils/helper";
 import TextInput from "../Input/TextInput";
 import SuccessModel from "../SuccessModel";
+import emailjs from "@emailjs/browser";
+
+const CONTACT_INFO = [
+    {
+        label: "Phone",
+        value: "+91 87073 18794",
+        icon: Phone,
+    },
+    {
+        label: "Email",
+        value: "parth.10june@gmail.com",
+        icon: FiMail,
+    },
+];
+
+const SOCIAL_LINKS = [
+    {
+        name: "GitHub",
+        url: "https://github.com/gutsyParth",
+        icon: FiGithub,
+        bgColor: "",
+        color: "",
+    },
+    {
+        name: "LinkedIn",
+        url: "https://www.linkedin.com/in/parth-yadav-10june/",
+        icon: FiLinkedin,
+        bgColor: "",
+        color: "",
+    },
+    {
+        name: "X",
+        url: "https://x.com/yourXhandle", // Replace with your actual X handle
+        icon: FiTwitter,
+        bgColor: "",
+        color: "",
+    },
+];
+
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.2,
+        },
+    },
+};
+
+const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.5,
+        },
+    },
+};
 
 const ContactSection = () => {
     const { isDarkMode } = useTheme();
@@ -17,6 +75,7 @@ const ContactSection = () => {
     const [showSuccess, setShowSuccess] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const sectionRef = useRef(null);
+    const formRef = useRef(null);
     const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
     const { scrollYProgress } = useScroll({
         target: sectionRef,
@@ -24,6 +83,7 @@ const ContactSection = () => {
     });
 
     const y = useTransform(scrollYProgress, [0, 1], [50, -50]);
+
     const handleInputChange = (key, value) => {
         setFormData({
             ...formData,
@@ -33,12 +93,31 @@ const ContactSection = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if (!formData.name || !formData.email || !formData.message) {
+            alert("Please fill out all fields.");
+            return;
+        }
+        if (!/\S+@\S+\.\S+/.test(formData.email)) {
+            alert("Please enter a valid email address.");
+            return;
+        }
         setIsSubmitting(true);
-        await new Promise((resolve) => setTimeout(resolve, 1000));
 
-        setIsSubmitting(false);
-        setShowSuccess(true);
-        setFromData({ name: "", email: "", message: "" });
+        try {
+            await emailjs.sendForm(
+                import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+                formRef.current,
+                import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+            );
+            setIsSubmitting(false);
+            setShowSuccess(true);
+            setFormData({ name: "", email: "", message: "" });
+        } catch (error) {
+            console.error("EmailJS error:", error);
+            setIsSubmitting(false);
+            alert("Failed to send message. Please try again later.");
+        }
 
         setTimeout(() => setShowSuccess(false), 3000);
     };
@@ -55,7 +134,7 @@ const ContactSection = () => {
                         }`}
                 />
                 <div
-                    className={`absolute bottom-40 right-1/4 w-80  h-80 rounded-full blur-3xl opacity-5 ${isDarkMode ? " bg-purple-500" : "bg-purple-400"
+                    className={`absolute bottom-40 right-1/4 w-80 h-80 rounded-full blur-3xl opacity-5 ${isDarkMode ? "bg-purple-500" : "bg-purple-400"
                         }`}
                 />
             </motion.div>
@@ -73,7 +152,6 @@ const ContactSection = () => {
                     >
                         Let's Connect
                     </motion.div>
-
                     <motion.h2
                         variants={itemVariants}
                         className="text-3xl md:text-5xl font-light mb-6"
@@ -86,8 +164,8 @@ const ContactSection = () => {
                         className={`text-xl max-w-2xl mx-auto ${isDarkMode ? "text-gray-400" : "text-gray-600"
                             }`}
                     >
-                        Ready to start your next project? Let's discuss how we can bring
-                        your ideas to life.
+                        Ready to start your next project? Let's discuss how we can bring your
+                        ideas to life.
                     </motion.p>
                 </motion.div>
 
@@ -105,64 +183,61 @@ const ContactSection = () => {
                                 }`}
                         >
                             <h3 className="text-2xl font-medium mb-8">Send me a message</h3>
-
-                            <div className="space-y-6">
-                                <div className="grid md:grid-cols-2 gap-6">
+                            <form ref={formRef} onSubmit={handleSubmit}>
+                                <div className="space-y-6">
+                                    <div className="grid md:grid-cols-2 gap-6">
+                                        <TextInput
+                                            isDarkMode={isDarkMode}
+                                            value={formData.name}
+                                            handleInputChange={(text) => handleInputChange("name", text)}
+                                            label="Your Name"
+                                            name="name"
+                                        />
+                                        <TextInput
+                                            isDarkMode={isDarkMode}
+                                            label="Email Address"
+                                            value={formData.email}
+                                            handleInputChange={(text) => handleInputChange("email", text)}
+                                            name="email"
+                                        />
+                                    </div>
                                     <TextInput
                                         isDarkMode={isDarkMode}
-                                        value={formData.name}
-                                        handleInputChange={(text) =>
-                                            handleInputChange("name", text)
-                                        }
-                                        label="Your Name"
+                                        label="Your Message"
+                                        value={formData.message}
+                                        textarea
+                                        handleInputChange={(text) => handleInputChange("message", text)}
+                                        name="message"
                                     />
-                                    <TextInput
-                                        isDarkMode={isDarkMode}
-                                        label="Email Address"
-                                        value={formData.email}
-                                        handleInputChange={(text) =>
-                                            handleInputChange("email", text)
-                                        }
-                                    />
+                                    <motion.button
+                                        disabled={isSubmitting}
+                                        whileHover={{ y: -2, scale: 1.02 }}
+                                        whileTap={{ scale: 0.98 }}
+                                        className="w-full bg-blue-500 hover:bg-blue-600 disabled:bg-blue-400 text-white py-4 rounded-xl text-sm uppercase tracking-wider font-medium transition-all duration-300 flex items-center justify-center space-x-2"
+                                        type="submit"
+                                    >
+                                        {isSubmitting ? (
+                                            <>
+                                                <motion.div
+                                                    animate={{ rotate: 360 }}
+                                                    transition={{
+                                                        duration: 1,
+                                                        repeat: Infinity,
+                                                        ease: "linear",
+                                                    }}
+                                                    className="w-4 h-4 border-2 border-white border-t-transparent rounded-full"
+                                                />
+                                                <span>Sending...</span>
+                                            </>
+                                        ) : (
+                                            <>
+                                                <Send size={18} />
+                                                <span>Send Message</span>
+                                            </>
+                                        )}
+                                    </motion.button>
                                 </div>
-
-                                <TextInput
-                                    isDarkMode={isDarkMode}
-                                    label="Your Message"
-                                    value={formData.message}
-                                    textarea
-                                    handleInputChange={(text) =>
-                                        handleInputChange("message", text)
-                                    }
-                                />
-                                <motion.button
-                                    disabled={isSubmitting}
-                                    whileHover={{ y: -2, scale: 1.02 }}
-                                    whileTap={{ scale: 0.98 }}
-                                    className="w-full bg-blue-500 hover:bg-blue-600 disabled:bg-blue-400 text-white py-4 rounded-xl  text-sm uppercase tracking-wider font-medium transition-all duration-300 flex  items-center justify-center space-x-2"
-                                    onClick={handleSubmit}
-                                >
-                                    {isSubmitting ? (
-                                        <>
-                                            <motion.div
-                                                animate={{ rotate: 360 }}
-                                                transition={{
-                                                    duration: 1,
-                                                    repeat: Infinity,
-                                                    ease: "linear",
-                                                }}
-                                                className="w-4 h-4 border-2 border-white border-t-transparent rounded-full"
-                                            />
-                                            <span>Sending...</span>
-                                        </>
-                                    ) : (
-                                        <>
-                                            <Send size={18} />
-                                            <span>Send Message</span>
-                                        </>
-                                    )}
-                                </motion.button>
-                            </div>
+                            </form>
                         </motion.div>
                     </motion.div>
 
@@ -182,19 +257,17 @@ const ContactSection = () => {
                                         whileHover={{ x: 4 }}
                                         className={`flex items-center space-x-4 p-4 rounded-xl ${isDarkMode
                                             ? "bg-gray-800/30 hover:bg-gray-800/50"
-                                            : "bg-gray-50/50 hover:bg-gray-100/5-"
+                                            : "bg-gray-50/50 hover:bg-gray-100/50"
                                             } transition-all duration-300`}
                                     >
                                         <div
-                                            className={`p-3 rounded-lg ${isDarkMode ? "bg-gray-700" : "bg-white"
-                                                }`}
+                                            className={`p-3 rounded-lg ${isDarkMode ? "bg-gray-700" : "bg-white"}`}
                                         >
                                             <info.icon size={20} className="text-blue-500" />
                                         </div>
                                         <div>
                                             <div
-                                                className={`text-sm ${isDarkMode ? "text-gray-500" : "text-gray-600"
-                                                    }`}
+                                                className={`text-sm ${isDarkMode ? "text-gray-500" : "text-gray-600"}`}
                                             >
                                                 {info.label}
                                             </div>
@@ -230,23 +303,15 @@ const ContactSection = () => {
 
                         <motion.div
                             variants={itemVariants}
-                            className={`p-6 rounded-xl border ${isDarkMode
-                                ? "bg-green-500/10 border-green-500/20"
-                                : "bg-green-50 border-green-200"
+                            className={`p-6 rounded-xl border ${isDarkMode ? "bg-green-500/10 border-green-500/20" : "bg-green-50 border-green-200"
                                 }`}
                         >
                             <div className="flex items-center space-x-3 mb-2">
                                 <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-                                <span className="font-medium text-green-500">
-                                    Available for Work
-                                </span>
+                                <span className="font-medium text-green-500">Available for Work</span>
                             </div>
-                            <p
-                                className={`text-sm ${isDarkMode ? "text-gray-400" : "text-gray-600"
-                                    }`}
-                            >
-                                I'm currently available for freelance projects and full-time
-                                opportunities.
+                            <p className={`text-sm ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}>
+                                I'm currently available for freelance projects and full-time opportunities.
                             </p>
                         </motion.div>
                     </motion.div>
@@ -260,18 +325,13 @@ const ContactSection = () => {
                 >
                     <motion.div
                         variants={itemVariants}
-                        className={`max-w-2xl mx-auto p-8 rounded-2xl border ${isDarkMode
-                            ? "bg-gray-800/30 border-gray-700"
-                            : "bg-gray-50/50 border-gray-200"
+                        className={`max-w-2xl mx-auto p-8 rounded-2xl border ${isDarkMode ? "bg-gray-800/30 border-gray-700" : "bg-gray-50/50 border-gray-200"
                             }`}
                     >
                         <h3 className="text-xl font-medium mb-4">Prefer a quick call?</h3>
-                        <p
-                            className={`${isDarkMode ? "text-gray-400" : "text-gray-600"
-                                } mb-6`}
-                        >
-                            Sometimes a conversation is worth a thousand messages. Feel free
-                            to schedule a call to discuss your project.
+                        <p className={`${isDarkMode ? "text-gray-400" : "text-gray-600"} mb-6`}>
+                            Sometimes a conversation is worth a thousand messages. Feel free to schedule a call
+                            to discuss your project.
                         </p>
                         <motion.button
                             whileHover={{ y: -2, scale: 1.05 }}
@@ -279,19 +339,16 @@ const ContactSection = () => {
                             className={`px-6 py-3 rounded-full border font-medium transition-all duration-300 ${isDarkMode
                                 ? "border-gray-600 hover:border-blue-500 hover:text-blue-400"
                                 : "border-gray-300 hover:border-blue-500 hover:text-blue-600"
-                                } `}
+                                }`}
                         >
                             Schedule a Call
                         </motion.button>
                     </motion.div>
                 </motion.div>
             </div>
-            <SuccessModel
-                showSuccess={showSuccess}
-                setShowSuccess={setShowSuccess}
-                isDarkMode={isDarkMode}
-            />
-        </section >
+            <SuccessModel showSuccess={showSuccess} setShowSuccess={setShowSuccess} isDarkMode={isDarkMode} />
+        </section>
     );
 };
+
 export default ContactSection;

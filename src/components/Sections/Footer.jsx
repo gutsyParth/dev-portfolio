@@ -7,7 +7,7 @@ import {
     Code2
 } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
-import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiMail, FiTwitter, FiX } from "react-icons/fi";
 import { containerVariants, itemVariants } from '../../utils/helper';
 const Footer = () => {
     const { isDarkMode } = useTheme();
@@ -19,21 +19,21 @@ const Footer = () => {
     const socialLinks = [{
         name: "GitHub",
         icon: FiGithub,
-        url: "https://gtihub.com",
+        url: "https://github.com/gutsyParth",
         color: "hover:text-gray-400"
     }, {
         name: "LinkedIn",
         icon: FiLinkedin,
-        url: "https://linkedin.com",
+        url: "https://www.linkedin.com/in/parth-yadav-10june/",
         color: "hover:text-blue-400"
     }, {
         name: "Twitter",
         icon: FiTwitter,
-        url: "https://twitter.com",
+        url: "https://x.com/parth_yadav_x",
         color: "hover:text-sky-400"
     }, {
         name: "Email",
-        icon: FiLinkedin,
+        icon: FiMail,
         url: "mailto:parth.10june@gmail.com",
         color: "hover:text-green-400"
     }]
@@ -115,7 +115,7 @@ const Footer = () => {
                             <motion.p
 
                                 variants={itemVariants} className={`text-sm ${isDarkMode ? "text-gray-400" : "text-gray-600"} max-w-md mx-auto`}>
-                                Crafting digital experiences with passion, precision, and a touch of magic.
+                                Creating innovative digital solutions with dedication, accuracy, and a dash of creativity.
                             </motion.p>
 
                         </motion.div>
