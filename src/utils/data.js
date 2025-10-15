@@ -83,8 +83,18 @@ export const PROJECTS = [
     description:
       "An AI-driven video conferencing app that enables real-time calls with intelligent agents, automatic summaries, transcripts, and contextual AI chat. It delivers a seamless post-call experience with recordings, transcript search, and responsive UI.",
     image: PROJECT_IMG_1,
-    tags: ["Next.js 15", "React 19", "Tailwind CSS v4", "Shadcn/ui", "Stream Video SDK", "Stream Chat SDK", "OpenAI API", "Inngest", "Polar", "Better Auth"
-],
+    tags: [
+      "Next.js 15",
+      "React 19",
+      "Tailwind CSS v4",
+      "Shadcn/ui",
+      "Stream Video SDK",
+      "Stream Chat SDK",
+      "OpenAI API",
+      "Inngest",
+      "Polar",
+      "Better Auth",
+    ],
     liveUrl: "https://ai-call-app-ochre.vercel.app/sign-in",
     githubUrl: "https://github.com/gutsyParth/AICallApp",
     featured: false,
@@ -96,9 +106,16 @@ export const PROJECTS = [
     description:
       "A modern, responsive portfolio website using React, Tailwind CSS, and Framer Motion with elegant animations and smooth transitions. Integrated a dark/light mode toggle and dynamic project showcases to highlight work interactively.",
     image: PROJECT_IMG_2,
-    tags: ["React 19", "Tailwind CSS v4", "Framer Motion", "Lucide React", "React Icons", "EmailJS", "Vite"
-],
-    liveUrl: "#",
+    tags: [
+      "React 19",
+      "Tailwind CSS v4",
+      "Framer Motion",
+      "Lucide React",
+      "React Icons",
+      "EmailJS",
+      "Vite",
+    ],
+    liveUrl: "https://dev-portfolio-rho-eight.vercel.app/",
     githubUrl: "https://github.com/gutsyParth/dev-portfolio",
     featured: true,
     category: "Full Stack",
@@ -115,7 +132,7 @@ export const JOURNEY_STEPS = [
     icon: Briefcase,
     color: "bg-red-500",
   },
-   {
+  {
     year: "Aug 2024 - Aug 2025",
     title: "Associate",
     company: "PwC",
@@ -151,7 +168,6 @@ export const JOURNEY_STEPS = [
     icon: GraduationCap,
     color: "bg-purple-500",
   },
- 
 ];
 
 export const PASSIONS = [
