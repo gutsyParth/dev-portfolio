@@ -37,7 +37,7 @@ const SOCIAL_LINKS = [
   },
   {
     name: "X",
-    url: "https://x.com/yourXhandle", // Replace with your actual X handle
+    url: "https://x.com/parth_yadav_x",
     icon: FiTwitter,
     bgColor: "",
     color: "",
@@ -126,20 +126,17 @@ const ContactSection = () => {
     <section
       id="contact"
       ref={sectionRef}
-      className={`py-24 px-6 ${
-        isDarkMode ? "bg-gray-900 text-white" : "bg-white text-gray-900"
-      } relative overflow-hidden`}
+      className={`py-24 px-6 ${isDarkMode ? "bg-gray-900 text-white" : "bg-white text-gray-900"
+        } relative overflow-hidden`}
     >
       <motion.div style={{ y }} className="absolute inset-0 overflow-hidden">
         <div
-          className={`absolute top-20 left-1/4 w-72 h-72 rounded-full blur-3xl opacity-5 ${
-            isDarkMode ? "bg-blue-500" : "bg-blue-400"
-          }`}
+          className={`absolute top-20 left-1/4 w-72 h-72 rounded-full blur-3xl opacity-5 ${isDarkMode ? "bg-blue-500" : "bg-blue-400"
+            }`}
         />
         <div
-          className={`absolute bottom-40 right-1/4 w-80 h-80 rounded-full blur-3xl opacity-5 ${
-            isDarkMode ? "bg-purple-500" : "bg-purple-400"
-          }`}
+          className={`absolute bottom-40 right-1/4 w-80 h-80 rounded-full blur-3xl opacity-5 ${isDarkMode ? "bg-purple-500" : "bg-purple-400"
+            }`}
         />
       </motion.div>
       <div className="max-w-6xl mx-auto relative z-10">
@@ -151,9 +148,8 @@ const ContactSection = () => {
         >
           <motion.div
             variants={itemVariants}
-            className={`text-sm uppercase tracking-widest ${
-              isDarkMode ? "text-gray-500" : "text-gray-600"
-            } mb-4`}
+            className={`text-sm uppercase tracking-widest ${isDarkMode ? "text-gray-500" : "text-gray-600"
+              } mb-4`}
           >
             Let's Connect
           </motion.div>
@@ -166,9 +162,8 @@ const ContactSection = () => {
           </motion.h2>
           <motion.p
             variants={itemVariants}
-            className={`text-xl max-w-2xl mx-auto ${
-              isDarkMode ? "text-gray-400" : "text-gray-600"
-            }`}
+            className={`text-xl max-w-2xl mx-auto ${isDarkMode ? "text-gray-400" : "text-gray-600"
+              }`}
           >
             Ready to start your next project? Let's discuss how we can bring
             your ideas to life.
@@ -183,11 +178,10 @@ const ContactSection = () => {
           >
             <motion.div
               variants={itemVariants}
-              className={`p-8 rounded-2xl border ${
-                isDarkMode
-                  ? "bg-gray-800/50 border-gray-700 backdrop-blur-sm"
-                  : "bg-gray-50/80 border-gray-200 backdrop-blur-sm"
-              }`}
+              className={`p-8 rounded-2xl border ${isDarkMode
+                ? "bg-gray-800/50 border-gray-700 backdrop-blur-sm"
+                : "bg-gray-50/80 border-gray-200 backdrop-blur-sm"
+                }`}
             >
               <h3 className="text-2xl font-medium mb-8">Send me a message</h3>
               <form ref={formRef} onSubmit={handleSubmit}>
@@ -268,24 +262,21 @@ const ContactSection = () => {
                     key={info.label}
                     variants={itemVariants}
                     whileHover={{ x: 4 }}
-                    className={`flex items-center space-x-4 p-4 rounded-xl ${
-                      isDarkMode
-                        ? "bg-gray-800/30 hover:bg-gray-800/50"
-                        : "bg-gray-50/50 hover:bg-gray-100/50"
-                    } transition-all duration-300`}
+                    className={`flex items-center space-x-4 p-4 rounded-xl ${isDarkMode
+                      ? "bg-gray-800/30 hover:bg-gray-800/50"
+                      : "bg-gray-50/50 hover:bg-gray-100/50"
+                      } transition-all duration-300`}
                   >
                     <div
-                      className={`p-3 rounded-lg ${
-                        isDarkMode ? "bg-gray-700" : "bg-white"
-                      }`}
+                      className={`p-3 rounded-lg ${isDarkMode ? "bg-gray-700" : "bg-white"
+                        }`}
                     >
                       <info.icon size={20} className="text-blue-500" />
                     </div>
                     <div>
                       <div
-                        className={`text-sm ${
-                          isDarkMode ? "text-gray-500" : "text-gray-600"
-                        }`}
+                        className={`text-sm ${isDarkMode ? "text-gray-500" : "text-gray-600"
+                          }`}
                       >
                         {info.label}
                       </div>
@@ -307,11 +298,10 @@ const ContactSection = () => {
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.95 }}
-                    className={`flex items-center space-x-3 p-4 rounded-xl border transition-all duration-300 ${
-                      isDarkMode
-                        ? "bg-gray-800/50 border-gray-700 hover:border-gray-600"
-                        : "bg-white/80 border-gray-200 hover:border-gray-300"
-                    } ${social.bgColor} ${social.color}`}
+                    className={`flex items-center space-x-3 p-4 rounded-xl border transition-all duration-300 ${isDarkMode
+                      ? "bg-gray-800/50 border-gray-700 hover:border-gray-600"
+                      : "bg-white/80 border-gray-200 hover:border-gray-300"
+                      } ${social.bgColor} ${social.color}`}
                   >
                     <social.icon size={20} />
                     <span className="font-medium">{social.name}</span>
@@ -322,11 +312,10 @@ const ContactSection = () => {
 
             <motion.div
               variants={itemVariants}
-              className={`p-6 rounded-xl border ${
-                isDarkMode
-                  ? "bg-green-500/10 border-green-500/20"
-                  : "bg-green-50 border-green-200"
-              }`}
+              className={`p-6 rounded-xl border ${isDarkMode
+                ? "bg-green-500/10 border-green-500/20"
+                : "bg-green-50 border-green-200"
+                }`}
             >
               <div className="flex items-center space-x-3 mb-2">
                 <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
@@ -335,9 +324,8 @@ const ContactSection = () => {
                 </span>
               </div>
               <p
-                className={`text-sm ${
-                  isDarkMode ? "text-gray-400" : "text-gray-600"
-                }`}
+                className={`text-sm ${isDarkMode ? "text-gray-400" : "text-gray-600"
+                  }`}
               >
                 I'm currently available for freelance projects and full-time
                 opportunities.
