@@ -79,145 +79,79 @@ export const STATS = [
 export const PROJECTS = [
   {
     id: 1,
-    title: "E-Commerce Platform",
+    title: "My AI (AI SaaS)",
     description:
-      "A full-stack e-commerce solution with advanced filtering, payment integration, and real-time inventor",
+      "An AI-driven video conferencing app that enables real-time calls with intelligent agents, automatic summaries, transcripts, and contextual AI chat. It delivers a seamless post-call experience with recordings, transcript search, and responsive UI.",
     image: PROJECT_IMG_1,
-    tags: ["React", "Tailwind", "Framer Motion"],
-    liveUrl: "#",
-    githubUrl: "#",
+    tags: ["Next.js 15", "React 19", "Tailwind CSS v4", "Shadcn/ui", "Stream Video SDK", "Stream Chat SDK", "OpenAI API", "Inngest", "Polar", "Better Auth"
+],
+    liveUrl: "https://ai-call-app-ochre.vercel.app/sign-in",
+    githubUrl: "https://github.com/gutsyParth/AICallApp",
     featured: false,
     category: "Full Stack",
   },
   {
     id: 2,
-    title: "Blog App with AI Post Generator",
+    title: "Developer Portfolio",
     description:
-      "A full-stack blog app using the MERN stack - with full Markdown support, tag filtering, and an integr",
+      "A modern, responsive portfolio website using React, Tailwind CSS, and Framer Motion with elegant animations and smooth transitions. Integrated a dark/light mode toggle and dynamic project showcases to highlight work interactively.",
     image: PROJECT_IMG_2,
-    tags: ["React", "Node.js", "MongoDB", "Tailwind"],
-    liveUrl: "https://youtu.be/tUnGudIBBjQ",
-    githubUrl: "#",
+    tags: ["React 19", "Tailwind CSS v4", "Framer Motion", "Lucide React", "React Icons", "EmailJS", "Vite"
+],
+    liveUrl: "#",
+    githubUrl: "https://github.com/gutsyParth/dev-portfolio",
     featured: true,
     category: "Full Stack",
   },
-  {
-    id: 3,
-    title: "Task Management App",
-    description:
-      "Collaborative project management tool with real-time updates, team chat, and advanced analytics dashb",
-    image: PROJECT_IMG_3,
-    tags: ["Next.js", "TypeScript", "Node.js", "MongoDb"],
-    liveUrl: "https://youtu.be/fZK57PxKC-0",
-    githubUrl: "#",
-    featured: true,
-    category: "Web App",
-  },
-  {
-    id: 4,
-    title: "AI-Powered Interview Prep App",
-    description:
-      "A smart AI-powered Interview Preparation App using the MERN stack - along with the Gemini API for int",
-    image: PROJECT_IMG_4,
-    tags: ["Next.js", "TypeScript", "Node.js", "MongoDb"],
-    liveUrl: "https://youtu.be/yKB90Ym-ao4",
-    githubUrl: "#",
-    featured: false,
-    category: "Web App",
-  },
-  {
-    id: 5,
-    title: "Resume Builder App",
-    description:
-      "A fully functional Resume Builder App using the MERN stack along with Tailwind CSS for a clean, modern",
-    image: PROJECT_IMG_5,
-    tags: ["Next.js", "TypeScript", "Node.js", "MongoDb"],
-    liveUrl: "https://youtu.be/q3_TFpkjLk8",
-    githubUrl: "#",
-    featured: false,
-    category: "Web App",
-  },
-  {
-    id: 6,
-    title: "Expense Tracker App",
-    description:
-      "This app includes user authentication with JWT, income and expense tracking, interactive charts, and",
-    image: PROJECT_IMG_6,
-    tags: ["Next.js", "TypeScript", "Node.js", "MongoDb"],
-    liveUrl: "https://youtu.be/PQnbtnsYUho",
-    githubUrl: "#",
-    featured: true,
-    category: "Web App",
-  },
-  //   {
-  //     id: 7,
-  //     title: "Polling App",
-  //     description:
-  //       "Polling app with features like user authentication, creating polls, voting, bookmarking, closing p",
-  //     image: PROJECT_IMG_7,
-  //     tags: ["React", "Framer Motion", "Tailwind", "Vercel"],
-  //     liveUrl: "#",
-  //     githubUrl: "#",
-  //     featured: false,
-  //     category: "Frontend",
-  //   },
 ];
 
 export const JOURNEY_STEPS = [
   {
-    year: "2021",
-    title: "Started Coding Journey",
-    company: "Self-taught",
+    year: "Aug 2025 - Present",
+    title: "Associate 2",
+    company: "PwC",
     description:
-      "Began learning web development with HTML, CSS, and JavaScript. Built my first website and fell in love",
-    icon: Code2,
-    color: "bg-blue-500",
+      "Led full-stack development of advanced NOC and client-facing dashboards, driving real-time data visualization, automated alert systems, and scalable backend architecture using Node.js, Redis, and cloud platforms (AWS/GCP). Oversaw code quality, mentoring, testing strategies, and CI/CD pipelines, ensuring secure authentication, WebSocket integrations, and high-performance, mobile-first frontend applications.",
+    icon: Briefcase,
+    color: "bg-red-500",
+  },
+   {
+    year: "Aug 2024 - Aug 2025",
+    title: "Associate",
+    company: "PwC",
+    description:
+      "Designed and enhanced end-to-end dashboards for Cybersecurity monitoring, implementing REST/GraphQL APIs, real-time notifications, and event-driven workflows using Node.js, Redis, and AWS Lambda. Collaborated on CI/CD pipelines, database optimization (SQL/PostgreSQL & NoSQL), and responsive frontend development with React, Next.js, and Shadcn/ui.",
+    icon: Briefcase,
+    color: "bg-orange-500",
   },
   {
-    year: "2022",
-    title: "First Internship",
-    company: "TechStart Inc.",
+    year: "Feb 2024 - Aug 2024",
+    title: "Intern and Campus Ambassador",
+    company: "PwC",
     description:
-      "Joined as a frontend intern, working with React and learning modern development practices. Contributed",
+      "Developed and maintained Cybersecurity NOC dashboards using React.js, Next.js, TypeScript, and Tailwind CSS, integrating real-time data and responsive UI features. Assisted in backend API development with Node.js/Express, Redis caching, and database management, while participating in Git-based version control and code reviews.",
+    icon: Briefcase,
+    color: "bg-yellow-500",
+  },
+  {
+    year: "Dec 2022 - Feb 2024",
+    title: "S.D.E. intern",
+    company: "EMSEC, U.K.",
+    description:
+      "Handled full-time software development responsibilities during internship, building Python/Django solutions, automating alerts, and managing Debian Linux systems. Leveraged a full-stack tech stack including Qt Creator, Next.js, JavaScript, TypeScript, C++, Java, HTML, CSS, Redis, and Linux to deliver reliable, user-focused features.",
     icon: Briefcase,
     color: "bg-green-500",
   },
   {
-    year: "2022",
-    title: "Computer Science Degree",
-    company: "University of Technology",
+    year: "2020 - 2024",
+    title: "Bachelor Of Technology",
+    company: "Computer Science and Engineering",
     description:
-      "Graduated with honors, specializing in web technologies and software engineering. Led the final year",
+      "Comprehensive Computer Science and Engineering curriculum covering mathematics, programming, algorithms, computer architecture, operating systems, databases, networks, and theory of computation. Developed strong foundations in full-stack software development, problem-solving, and system design principles.",
     icon: GraduationCap,
     color: "bg-purple-500",
   },
-  {
-    year: "2023",
-    title: "Full Stack Developer",
-    company: "Digital Solutions Ltd.",
-    description:
-      "Promoted to full-time developer role. Built end-to-end applications using MERN stack and led junior",
-    icon: Rocket,
-    color: "bg-orange-500",
-  },
-  {
-    year: "2024",
-    title: "Freelance & Open Source",
-    company: "Independent",
-    description:
-      "Started freelancing and contributing to open source projects. Launched 3 successful web applications",
-    icon: Award,
-    color: "bg-pink-500",
-  },
-  {
-    year: "2025",
-    title: "Senior Developer",
-    company: "Present",
-    description:
-      "Currently building innovative solutions and exploring new technologies like AI integration and advanced",
-    icon: Zap,
-    color: "bg-cyan-500",
-  },
+ 
 ];
 
 export const PASSIONS = [
