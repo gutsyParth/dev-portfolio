@@ -143,7 +143,7 @@ export const JOURNEY_STEPS = [
   },
   {
     year: "Feb 2024 - Aug 2024",
-    title: "Intern and Campus Ambassador",
+    title: "Intern",
     company: "PwC",
     description:
       "Developed and maintained Cybersecurity NOC dashboards using React.js, Next.js, TypeScript, and Tailwind CSS, integrating real-time data and responsive UI features. Assisted in backend API development with Node.js/Express, Redis caching, and database management, while participating in Git-based version control and code reviews.",
@@ -161,7 +161,7 @@ export const JOURNEY_STEPS = [
   },
   {
     year: "2020 - 2024",
-    title: "Bachelor Of Technology",
+    title: "B.Tech",
     company: "Computer Science and Engineering",
     description:
       "Comprehensive Computer Science and Engineering curriculum covering mathematics, programming, algorithms, computer architecture, operating systems, databases, networks, and theory of computation. Developed strong foundations in full-stack software development, problem-solving, and system design principles.",

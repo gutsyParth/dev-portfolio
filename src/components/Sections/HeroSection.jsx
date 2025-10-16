@@ -135,13 +135,13 @@ const HeroSection = () => {
                                 ))}
                             </motion.div>
                             <motion.div variants={itemVariants} className="flex justify-center items-center space-x-6 text-xs uppercase tracking-widest flex-wrap">
-                                <span className={isDarkMode ? "text-gray-600" : "text-gray-500"}>React</span>
+                                <span className={isDarkMode ? "text-gray-600" : "text-gray-500"}>Design</span>
                                 <span className={isDarkMode ? "text-gray-700" : "text-gray-400"}>•</span>
-                                <span className={isDarkMode ? "text-gray-600" : "text-gray-500"}>Node.js</span>
+                                <span className={isDarkMode ? "text-gray-600" : "text-gray-500"}>Develop</span>
                                 <span className={isDarkMode ? "text-gray-700" : "text-gray-400"}>•</span>
-                                <span className={isDarkMode ? "text-gray-600" : "text-gray-500"}>TypeScript</span>
+                                <span className={isDarkMode ? "text-gray-600" : "text-gray-500"}>Deploy</span>
                                 <span className={isDarkMode ? "text-gray-700" : "text-gray-400"}>•</span>
-                                <span className={isDarkMode ? "text-gray-600" : "text-gray-500"}>MongoDB</span>
+                                <span className={isDarkMode ? "text-gray-600" : "text-gray-500"}>Repeat</span>
                             </motion.div>
                         </motion.div>
                     </div>
@@ -207,13 +207,13 @@ const HeroSection = () => {
                         <motion.div initial="hidden" animate="visible" variants={imageVariants} className="flex justify-center lg:justify-end">
                             <div className="relative">
                                 <motion.div variants={itemVariants} className="flex items-center space-x-8 text-xs uppercase tracking-widest absolute -top-16 -left-28">
-                                    <span className={isDarkMode ? "text-gray-600" : "text-gray-500"}>React</span>
+                                    <span className={isDarkMode ? "text-gray-600" : "text-gray-500"}>Design</span>
                                     <span className={isDarkMode ? "text-gray-700" : "text-gray-400"}>•</span>
-                                    <span className={isDarkMode ? "text-gray-600" : "text-gray-500"}>Node.js</span>
+                                    <span className={isDarkMode ? "text-gray-600" : "text-gray-500"}>Develop</span>
                                     <span className={isDarkMode ? "text-gray-700" : "text-gray-400"}>•</span>
-                                    <span className={isDarkMode ? "text-gray-600" : "text-gray-500"}>TypeScript</span>
+                                    <span className={isDarkMode ? "text-gray-600" : "text-gray-500"}>Deploy</span>
                                     <span className={isDarkMode ? "text-gray-700" : "text-gray-400"}>•</span>
-                                    <span className={isDarkMode ? "text-gray-600" : "text-gray-500"}>MongoDB</span>
+                                    <span className={isDarkMode ? "text-gray-600" : "text-gray-500"}>Repeat</span>
                                 </motion.div>
                                 <motion.div whileHover={{ scale: 1.02 }} className={`w-80 h-96 rounded-3xl overflow-hidden border-4 ${isDarkMode ? "border-gray-800" : "border-gray-300"} shadow-2xl`}>
                                     <img src={PROFILE_PIC} alt="Profile" className="w-full h-full object-cover" />
