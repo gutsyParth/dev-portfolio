@@ -30,7 +30,7 @@ const SOCIAL_LINKS = [
   },
   {
     name: "LinkedIn",
-    url: "https://www.linkedin.com/in/parth-yadav-10june/",
+    url: "https://www.linkedin.com/in/parth-yadav-sde/",
     icon: FiLinkedin,
     bgColor: "",
     color: "",
