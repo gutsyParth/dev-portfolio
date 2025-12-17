@@ -24,7 +24,7 @@ const Footer = () => {
     }, {
         name: "LinkedIn",
         icon: FiLinkedin,
-        url: "https://www.linkedin.com/in/parth-yadav-10june/",
+        url: "https://www.linkedin.com/in/parth-yadav-sde/",
         color: "hover:text-blue-400"
     }, {
         name: "Twitter",
