@@ -146,29 +146,29 @@ export const PROJECTS = [
 
 export const JOURNEY_STEPS = [
   {
-    year: "Aug 2025 - Present",
+    year: "Jul 2025 - Present",
     title: "Associate 2",
     company: "PwC",
     description:
-      "Led full-stack development of advanced NOC and client-facing dashboards, driving real-time data visualization, automated alert systems, and scalable backend architecture using Node.js, Redis, and cloud platforms (AWS/GCP). Oversaw code quality, mentoring, testing strategies, and CI/CD pipelines, ensuring secure authentication, WebSocket integrations, and high-performance, mobile-first frontend applications.",
+      "Working across multiple enterprise client engagements building full-stack features for operational platforms used by business and support teams. Implemented WebSocket-based real-time updates so shipment and system status changes appear instantly without requiring page refreshes. Designed UI modules capable of handling frequent data updates without unnecessary re-renders and added logging and monitoring around real-time event pipelines to detect dropped events. Also contributed to deployment workflows by assisting with Docker containerization and AWS ECS environment setup.",
     icon: Briefcase,
     color: "bg-red-500",
   },
   {
-    year: "Aug 2024 - Aug 2025",
+    year: "Jul 2024 - Jun 2025",
     title: "Associate",
     company: "PwC",
     description:
-      "Designed and enhanced end-to-end dashboards for Cybersecurity monitoring, implementing REST/GraphQL APIs, real-time notifications, and event-driven workflows using Node.js, Redis, and AWS Lambda. Collaborated on CI/CD pipelines, database optimization (SQL/PostgreSQL & NoSQL), and responsive frontend development with React, Next.js, and Shadcn/ui.",
+      "Built and improved React and Next.js dashboards used by business teams to manage product catalogs, monitor financial transactions, and track logistics operations. Implemented multi-file upload workflows using AWS S3 pre-signed URLs and improved API performance by introducing Redis caching for frequently requested endpoints. Introduced TanStack Query for server-state management and optimized PostgreSQL queries with indexing for high-volume lookup endpoints, improving overall responsiveness of operational dashboards.",
     icon: Briefcase,
     color: "bg-orange-500",
   },
   {
-    year: "Feb 2024 - Aug 2024",
+    year: "Jan 2024 - Jun 2024",
     title: "Intern",
     company: "PwC",
     description:
-      "Developed and maintained Cybersecurity NOC dashboards using React.js, Next.js, TypeScript, and Tailwind CSS, integrating real-time data and responsive UI features. Assisted in backend API development with Node.js/Express, Redis caching, and database management, while participating in Git-based version control and code reviews.",
+      "Contributed to frontend features for internal dashboards used by operations teams across retail and logistics clients. Built React and Next.js UI components to display large datasets such as product catalogs and shipment records, implementing server-side pagination and lazy loading for better performance. Integrated REST APIs, handled loading states and error scenarios, and worked with backend engineers using FastAPI and PostgreSQL services while participating in code reviews and debugging production issues.",
     icon: Briefcase,
     color: "bg-yellow-500",
   },
