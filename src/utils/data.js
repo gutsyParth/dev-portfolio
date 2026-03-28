@@ -79,6 +79,28 @@ export const STATS = [
 export const PROJECTS = [
   {
     id: 1,
+    title: "Whispr (Secure Real-Time Chat)",
+    description:
+      "A privacy-focused real-time chat platform that creates temporary anonymous rooms for two users with automatic message destruction. Built with Redis-backed room state, real-time event streaming, and a fully type-safe API layer to enable secure ephemeral conversations.",
+    image: PROJECT_IMG_3,
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Redis",
+      "ElysiaJS",
+      "Eden Treaty",
+      "TanStack Query",
+      "Tailwind CSS",
+      "Real-time Messaging",
+      "Vercel",
+    ],
+    liveUrl: "https://whispr-flame.vercel.app/",
+    githubUrl: "https://github.com/gutsyParth/whispr",
+    featured: true,
+    category: "Full Stack",
+  },
+  {
+    id: 2,
     title: "My AI (AI SaaS)",
     description:
       "An AI-driven video conferencing app that enables real-time calls with intelligent agents, automatic summaries, transcripts, and contextual AI chat. It delivers a seamless post-call experience with recordings, transcript search, and responsive UI.",
@@ -97,11 +119,11 @@ export const PROJECTS = [
     ],
     liveUrl: "https://ai-call-app-ochre.vercel.app/sign-in",
     githubUrl: "https://github.com/gutsyParth/AICallApp",
-    featured: false,
+    featured: true,
     category: "Full Stack",
   },
   {
-    id: 2,
+    id: 3,
     title: "Developer Portfolio",
     description:
       "A modern, responsive portfolio website using React, Tailwind CSS, and Framer Motion with elegant animations and smooth transitions. Integrated a dark/light mode toggle and dynamic project showcases to highlight work interactively.",
@@ -117,7 +139,7 @@ export const PROJECTS = [
     ],
     liveUrl: "https://dev-portfolio-rho-eight.vercel.app/",
     githubUrl: "https://github.com/gutsyParth/dev-portfolio",
-    featured: true,
+    featured: false,
     category: "Full Stack",
   },
 ];
