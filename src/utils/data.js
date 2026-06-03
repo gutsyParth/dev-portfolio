@@ -2,10 +2,7 @@ import {
   Code2,
   GraduationCap,
   Briefcase,
-  Award,
   Rocket,
-  Heart,
-  Coffee,
   BookOpen,
   Zap,
   Database,
@@ -16,83 +13,134 @@ import {
   Phone,
 } from "lucide-react";
 
-import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
+import { FiGithub, FiLinkedin } from "react-icons/fi";
 
 import PROJECT_IMG_1 from "../assets/images/project-1.png";
 import PROJECT_IMG_2 from "../assets/images/project-2.png";
 import PROJECT_IMG_3 from "../assets/images/project-3.png";
-import PROJECT_IMG_4 from "../assets/images/project-4.png";
-import PROJECT_IMG_5 from "../assets/images/project-5.png";
-import PROJECT_IMG_6 from "../assets/images/project-6.png";
-import PROJECT_IMG_7 from "../assets/images/project-7.png";
 
 export const SKILLS_CATEGORY = [
   {
     title: "Frontend",
     icon: Code2,
-    description: "Crafting beautiful, responsive user interfaces",
-    skills: ["JavaScript", "TypeScript", "React 19", "Next.js", "Tailwind CSS"],
+    description: "Building scalable, responsive enterprise interfaces",
+    skills: [
+      "React.js",
+      "Next.js",
+      "TypeScript",
+      "JavaScript",
+      "Tailwind CSS",
+      "Material UI",
+    ],
   },
   {
     title: "Backend",
     icon: Server,
-    description: "Building robust server-side solutions",
-    skills: ["Node.js", "Express", "Python", "C++", "Java"],
+    description: "Designing robust APIs and distributed backend systems",
+    skills: [
+      "Node.js",
+      "Express.js",
+      "FastAPI",
+      "Spring Boot",
+      "REST APIs",
+      "GraphQL",
+      "WebSockets",
+    ],
   },
   {
     title: "Database",
     icon: Database,
-    description: "Managing and optimizing data storage",
-    skills: ["MongoDB", "Prisma ORM", "Neon Postgres", "Redis"],
+    description: "Optimizing scalable data storage and caching layers",
+    skills: [
+      "PostgreSQL",
+      "MongoDB",
+      "Redis",
+      "MySQL",
+    ],
   },
   {
-    title: "DevOps",
+    title: "Cloud & DevOps",
     icon: Cloud,
-    description: "Deploying and scaling applications",
-    skills: ["Linux", "Docker", "AWS", "Vercel", "Git", "CI/CD"],
+    description: "Deploying containerized applications and cloud services",
+    skills: [
+      "Docker",
+      "AWS EC2",
+      "CI/CD",
+      "GitHub Actions",
+      "RabbitMQ",
+      "Linux",
+      "Splunk",
+    ],
   },
 ];
 
 export const TECH_STACK = [
-  "Shadcn/ui",
-  "Go",
-  "CSS3",
-  "Inngest",
-  "Better Auth",
-  "Polar",
-  "OpenAI integration",
-  "CodeRabbit",
-  "Stream",
-  "Claude",
-  "Gemini",
-  "tRPC",
-  "Sentry",
+  "React.js",
+  "Next.js",
+  "TypeScript",
+  "Node.js",
+  "Express.js",
+  "FastAPI",
+  "Spring Boot",
+  "PostgreSQL",
+  "MongoDB",
+  "Redis",
+  "RabbitMQ",
+  "Docker",
+  "AWS EC2",
+  "Socket.IO",
+  "GraphQL",
+  "WebSockets",
+  "CI/CD",
+  "System Design",
 ];
 
 export const STATS = [
-  { number: "10+", label: "Projects Completed" },
-  { number: "5", label: "Countries" },
   { number: "2+", label: "Years of Experience" },
-  { number: "10+", label: "Clients" },
+  { number: "10+", label: "Production Projects" },
+  { number: "3x", label: "GATE Qualified" },
+  { number: "Top 30", label: "PwC Hackathon Rank" },
 ];
 
 export const PROJECTS = [
   {
     id: 1,
+    title: "Feastly (Microservices Food Delivery Platform)",
+    description:
+      "Engineered a scalable microservices-based food delivery platform with role-based access control, JWT authentication, Google OAuth, and real-time order synchronization. Built distributed services using RabbitMQ and Socket.IO with secure Stripe and Razorpay payment workflows, rider tracking, and Dockerized AWS deployment.",
+    image: PROJECT_IMG_3,
+    tags: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "RabbitMQ",
+      "Socket.IO",
+      "Docker",
+      "AWS EC2",
+      "Stripe",
+      "Razorpay",
+    ],
+    liveUrl: "https://ai-call-app-ochre.vercel.app/sign-in",
+    githubUrl: "https://github.com/gutsyParth/AICallApp",
+    featured: true,
+    category: "Microservices",
+  },
+  {
+    id: 2,
     title: "Whispr (Secure Real-Time Chat)",
     description:
-      "A privacy-focused real-time chat platform that creates temporary anonymous rooms for two users with automatic message destruction. Built with Redis-backed room state, real-time event streaming, and a fully type-safe API layer to enable secure ephemeral conversations.",
-    image: PROJECT_IMG_3,
+      "Architected a privacy-centric real-time chat platform supporting temporary anonymous communication using Next.js, ElysiaJS, Redis, and WebSockets. Implemented ephemeral room state management with automatic TTL cleanup and low-latency real-time messaging workflows.",
+    image: PROJECT_IMG_1,
     tags: [
       "Next.js",
       "TypeScript",
       "Redis",
       "ElysiaJS",
-      "Eden Treaty",
-      "TanStack Query",
+      "WebSockets",
       "Tailwind CSS",
-      "Real-time Messaging",
-      "Vercel",
+      "Real-Time Systems",
     ],
     liveUrl: "https://whispr-flame.vercel.app/",
     githubUrl: "https://github.com/gutsyParth/whispr",
@@ -100,93 +148,50 @@ export const PROJECTS = [
     category: "Full Stack",
   },
   {
-    id: 2,
-    title: "My AI (AI SaaS)",
+    id: 3,
+    title: "My AI (AI Video Conferencing Platform)",
     description:
-      "An AI-driven video conferencing app that enables real-time calls with intelligent agents, automatic summaries, transcripts, and contextual AI chat. It delivers a seamless post-call experience with recordings, transcript search, and responsive UI.",
-    image: PROJECT_IMG_1,
+      "Built a high-performance React-based video conferencing platform featuring live meetings, AI-generated summaries, real-time transcripts, and asynchronous API integrations for intelligent post-call workflows.",
+    image: PROJECT_IMG_2,
     tags: [
-      "Next.js 15",
-      "React 19",
-      "Tailwind CSS v4",
-      "Shadcn/ui",
-      "Stream Video SDK",
-      "Stream Chat SDK",
-      "OpenAI API",
-      "Inngest",
-      "Polar",
-      "Better Auth",
+      "React",
+      "TypeScript",
+      "WebRTC",
+      "REST APIs",
+      "Real-Time Communication",
     ],
     liveUrl: "https://ai-call-app-ochre.vercel.app/sign-in",
     githubUrl: "https://github.com/gutsyParth/AICallApp",
     featured: true,
     category: "Full Stack",
   },
-  {
-    id: 3,
-    title: "Developer Portfolio",
-    description:
-      "A modern, responsive portfolio website using React, Tailwind CSS, and Framer Motion with elegant animations and smooth transitions. Integrated a dark/light mode toggle and dynamic project showcases to highlight work interactively.",
-    image: PROJECT_IMG_2,
-    tags: [
-      "React 19",
-      "Tailwind CSS v4",
-      "Framer Motion",
-      "Lucide React",
-      "React Icons",
-      "EmailJS",
-      "Vite",
-    ],
-    liveUrl: "https://dev-portfolio-rho-eight.vercel.app/",
-    githubUrl: "https://github.com/gutsyParth/dev-portfolio",
-    featured: false,
-    category: "Full Stack",
-  },
 ];
 
 export const JOURNEY_STEPS = [
   {
-    year: "Jul 2025 - Present",
-    title: "Associate 2",
-    company: "PwC",
+    year: "Feb 2024 - Present",
+    title: "Software Engineer (Associate 2)",
+    company: "PwC Acceleration Center India",
     description:
-      "Working across multiple enterprise client engagements building full-stack features for operational platforms used by business and support teams. Implemented WebSocket-based real-time updates so shipment and system status changes appear instantly without requiring page refreshes. Designed UI modules capable of handling frequent data updates without unnecessary re-renders and added logging and monitoring around real-time event pipelines to detect dropped events. Also contributed to deployment workflows by assisting with Docker containerization and AWS ECS environment setup.",
+      "Architecting enterprise applications for automotive quoting and lending risk domains using React.js, FastAPI, and Spring Boot. Built scalable batch-processing systems with Celery and Redis, optimized PostgreSQL-backed APIs, implemented OCR-integrated microservices with ABBYY FlexiCapture and Drools, and improved observability using Splunk, audit logging, and distributed tracing.",
     icon: Briefcase,
     color: "bg-red-500",
   },
   {
-    year: "Jul 2024 - Jun 2025",
-    title: "Associate",
-    company: "PwC",
+    year: "Dec 2022 - Jul 2024",
+    title: "Software Engineer Intern / Contract Engineer",
+    company: "EMSEC Pvt. Ltd.",
     description:
-      "Built and improved React and Next.js dashboards used by business teams to manage product catalogs, monitor financial transactions, and track logistics operations. Implemented multi-file upload workflows using AWS S3 pre-signed URLs and improved API performance by introducing Redis caching for frequently requested endpoints. Introduced TanStack Query for server-state management and optimized PostgreSQL queries with indexing for high-volume lookup endpoints, improving overall responsiveness of operational dashboards.",
-    icon: Briefcase,
-    color: "bg-orange-500",
-  },
-  {
-    year: "Jan 2024 - Jun 2024",
-    title: "Intern",
-    company: "PwC",
-    description:
-      "Contributed to frontend features for internal dashboards used by operations teams across retail and logistics clients. Built React and Next.js UI components to display large datasets such as product catalogs and shipment records, implementing server-side pagination and lazy loading for better performance. Integrated REST APIs, handled loading states and error scenarios, and worked with backend engineers using FastAPI and PostgreSQL services while participating in code reviews and debugging production issues.",
-    icon: Briefcase,
-    color: "bg-yellow-500",
-  },
-  {
-    year: "Dec 2022 - Feb 2024",
-    title: "S.D.E. intern",
-    company: "EMSEC, U.K.",
-    description:
-      "Handled full-time software development responsibilities during internship, building Python/Django solutions, automating alerts, and managing Debian Linux systems. Leveraged a full-stack tech stack including Qt Creator, Next.js, JavaScript, TypeScript, C++, Java, HTML, CSS, Redis, and Linux to deliver reliable, user-focused features.",
+      "Engineered backend REST APIs and dynamic network interface detection systems using Python and Django for Debian Linux deployments. Built full-stack security monitoring dashboards and automated event-driven alert delivery systems for cybersecurity operations.",
     icon: Briefcase,
     color: "bg-green-500",
   },
   {
     year: "2020 - 2024",
-    title: "B.Tech",
+    title: "Bachelor of Technology",
     company: "Computer Science and Engineering",
     description:
-      "Comprehensive Computer Science and Engineering curriculum covering mathematics, programming, algorithms, computer architecture, operating systems, databases, networks, and theory of computation. Developed strong foundations in full-stack software development, problem-solving, and system design principles.",
+      "Built strong foundations in algorithms, operating systems, databases, computer networks, system design, and scalable software engineering while actively developing full-stack applications and solving competitive programming problems.",
     icon: GraduationCap,
     color: "bg-purple-500",
   },
@@ -194,19 +199,22 @@ export const JOURNEY_STEPS = [
 
 export const PASSIONS = [
   {
-    icon: Heart,
-    title: "User Experience",
-    description: "Crafting intuitive interfaces that users love",
+    icon: Rocket,
+    title: "Distributed Systems",
+    description:
+      "Designing scalable backend architectures and event-driven systems",
   },
   {
-    icon: Coffee,
-    title: "Problem Solving",
-    description: "Turning complex challenges into elegant solutions",
+    icon: Zap,
+    title: "Performance Engineering",
+    description:
+      "Optimizing APIs, databases, and real-time application workflows",
   },
   {
     icon: BookOpen,
     title: "Continuous Learning",
-    description: "Always exploring new technologies and best practices",
+    description:
+      "Exploring system design, cloud infrastructure, and modern engineering practices",
   },
 ];
 
@@ -214,28 +222,21 @@ export const SOCIAL_LINKS = [
   {
     name: "GitHub",
     icon: FiGithub,
-    url: "https://github.com",
+    url: "https://github.com/gutsyParth",
     color: "hover:text-gray-400",
     bgColor: "hover:bg-gray-800",
   },
   {
     name: "LinkedIn",
     icon: FiLinkedin,
-    url: "https://linkedin.com",
+    url: "https://www.linkedin.com/in/parth-yadav-sde/",
     color: "hover:text-blue-400",
     bgColor: "hover:bg-blue-500/10",
   },
   {
-    name: "Twitter",
-    icon: FiTwitter,
-    url: "https://twitter.com",
-    color: "hover:text-blue-600",
-    bgColor: "hover:bg-blue-100",
-  },
-  {
     name: "Email",
     icon: Mail,
-    url: "parth.10june@gmail.com",
+    url: "mailto:parth.10june@gmail.com",
     color: "hover:text-green-400",
     bgColor: "hover:bg-green-500/10",
   },
@@ -255,6 +256,6 @@ export const CONTACT_INFO = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+918707318794",
+    value: "+91 87073 18794",
   },
 ];
