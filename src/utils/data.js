@@ -108,7 +108,7 @@ export const PROJECTS = [
     title: "Feastly (Microservices Food Delivery Platform)",
     description:
       "Engineered a scalable microservices-based food delivery platform with role-based access control, JWT authentication, Google OAuth, and real-time order synchronization. Built distributed services using RabbitMQ and Socket.IO with secure Stripe and Razorpay payment workflows, rider tracking, and Dockerized AWS deployment.",
-    image: PROJECT_IMG_3,
+    image: PROJECT_IMG_1,
     tags: [
       "React",
       "TypeScript",
@@ -132,7 +132,7 @@ export const PROJECTS = [
     title: "Whispr (Secure Real-Time Chat)",
     description:
       "Architected a privacy-centric real-time chat platform supporting temporary anonymous communication using Next.js, ElysiaJS, Redis, and WebSockets. Implemented ephemeral room state management with automatic TTL cleanup and low-latency real-time messaging workflows.",
-    image: PROJECT_IMG_1,
+    image: PROJECT_IMG_2,
     tags: [
       "Next.js",
       "TypeScript",
@@ -152,7 +152,7 @@ export const PROJECTS = [
     title: "My AI (AI Video Conferencing Platform)",
     description:
       "Built a high-performance React-based video conferencing platform featuring live meetings, AI-generated summaries, real-time transcripts, and asynchronous API integrations for intelligent post-call workflows.",
-    image: PROJECT_IMG_2,
+    image: PROJECT_IMG_3,
     tags: [
       "React",
       "TypeScript",
